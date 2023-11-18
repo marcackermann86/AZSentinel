@@ -120,7 +120,7 @@ function Set-AzSentinel {
                 $errorReturn = $_
                 $errorResult = ($errorReturn | ConvertFrom-Json ).error
                 if ($errorResult.Code -eq 'ResourceNotFound') {
-                    Write-Output "Azure Sentinal is not enabled on workspace: $($WorkspaceName)"
+                    Write-Output "Azure Sentinel is not enabled on workspace: $($WorkspaceName)"
                     try {
                         if ($PSCmdlet.ShouldProcess("Do you want to enable Sentinel for Workspace: $workspace")) {
                             $result = Invoke-WebRequest -Uri $uri -Method Put -Headers $script:authHeader -Body ($body | ConvertTo-Json)
