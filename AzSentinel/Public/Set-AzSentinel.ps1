@@ -108,7 +108,7 @@ function Set-AzSentinel {
                     'promotionCode' = ''
                 }
             }
-            $uri = "$(($Script:baseUri).Split('microsoft.operationalinsights')[0])Microsoft.OperationsManagement/solutions/SecurityInsights($WorkspaceName)?api-version=2015-11-01-preview"
+            $uri = "$(($Script:baseUri).Split('Microsoft.OperationalInsights')[0])Microsoft.OperationsManagement/solutions/SecurityInsights($WorkspaceName)?api-version=2015-11-01-preview"
 
             try {
                 $solutionResult = Invoke-webrequest -Uri $uri -Method Get -Headers $script:authHeader
