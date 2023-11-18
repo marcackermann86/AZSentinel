@@ -121,6 +121,7 @@
             * Fixed issue in Remove-AzSentinelRule #21'
 
         } # End of PSData hashtable
+    } # End of PrivateData hashtable
 	# HelpInfo URI of this module
 	# HelpInfoURI = ''
 
